@@ -73,7 +73,7 @@ const Demo = () => {
 			cache.get(queryStr);
 			end = performance.now();
 			console.log(`Execution time after: ${(end - start)} ms`);
-			setTimeArr((timeArr) => [...timeArr, (end - start).toFixed(2)]);
+			setTimeArr((timeArr) => [...timeArr, (end - start).toFixed(3)]);
 			setCurrentTime(`${(end - start).toFixed(2)}` + ' ms');
 		}
 		return;

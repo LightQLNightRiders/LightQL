@@ -32,8 +32,18 @@ module.exports = {
 			template: './src/client/index.html'
 		})
 	],
+	devtool: 'inline-source-map',
+  	resolve: {
+    	extensions: ['.tsx', '.ts', '.js'],
+  	},
+
 	module: {
 		rules: [
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
+			},
 			{
 				test: /.js$/,
 				exclude: /node_modules/,
